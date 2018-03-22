@@ -1,0 +1,47 @@
+[
+  {
+    "img": "/images/thumbnail/thumb02.jpg",
+    "description": "HASU",
+    "href": "#cut-pg01"
+  },
+  {
+    "img": "/images/thumbnail/thumb06.jpg",
+    "description": "YURI",
+    "href": "#cut-pg02"
+  },
+  {
+    "img": "/images/thumbnail/thumb12.jpg",
+    "description": "HASU",
+    "href": "#cut-pg03"
+  },
+  {
+    "img": "/images/thumbnail/thumb07.jpg",
+    "description": "OTHER",
+    "href": "#cut-pg04"
+  },
+  {
+    "img": "/images/thumbnail/thumb05.jpg",
+    "description": "HASU",
+    "href": "#cut-pg05"
+  },
+  {
+    "img": "/images/thumbnail/thumb08.jpg",
+    "description": "HASU",
+    "href": "#cut-pg06"
+  },
+  {
+    "img": "/images/thumbnail/thumb13.jpg",
+    "description": "FOODS",
+    "href": "#cut-pg07"
+  },
+  {
+    "img": "/images/thumbnail/thumb14.jpg",
+    "description": "SUNFLOWER",
+    "href": "#cut-pg08"
+  },
+  {
+    "img": "/images/thumbnail/thumb15.jpg",
+    "description": "WITHERED",
+    "href": "#cut-pg09"
+  }
+]

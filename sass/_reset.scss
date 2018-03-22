@@ -1,0 +1,60 @@
+/* margin padding reset */
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
+  margin: 0;
+  padding: 0;
+}
+/* remove list point mark */
+ul, ol {
+  list-style: none;
+}
+/* remove border & off descender */
+img {
+  border: 0;
+  vertical-align: middle;
+  height: auto;
+}
+/* remove descender */
+svg, input, select, textarea, label {
+  vertical-align: middle;
+}
+/* set collapse */
+table {
+  border-collapse: collapse;
+}
+/* break word for all elements */
+*,
+*:before,
+*:after {
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* [IE8-] New Tag from HTML5 */
+main, article, aside, figcaption, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+address {
+  font-style: normal;
+}
+/*-------------------------------------------------------------------------------
+BASE STYLE
+-------------------------------------------------------------------------------*/
+/* base font color */
+html, input, select, textarea {
+  color: #212121;
+}
+/* normalize size */
+input, textarea {
+  font-size: 100%;
+}
+/* normalize size & weight */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+/* normalize style & weight */
+strong, em, small {
+  font-style: inherit;
+  font-weight: inherit;
+}
