@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* margin padding reset */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
+  margin: 0;
+  padding: 0; }
+
+/* remove list point mark */
+ul, ol {
+  list-style: none; }
+
+/* remove border & off descender */
+img {
+  border: 0;
+  vertical-align: middle;
+  height: auto; }
+
+/* remove descender */
+svg, input, select, textarea, label {
+  vertical-align: middle; }
+
+/* set collapse */
+table {
+  border-collapse: collapse; }
+
+/* break word for all elements */
+*,
+*:before,
+*:after {
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* [IE8-] New Tag from HTML5 */
+main, article, aside, figcaption, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+address {
+  font-style: normal; }
+
+/*-------------------------------------------------------------------------------
+BASE STYLE
+-------------------------------------------------------------------------------*/
+/* base font color */
+html, input, select, textarea {
+  color: #212121; }
+
+/* normalize size */
+input, textarea {
+  font-size: 100%; }
+
+/* normalize size & weight */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+/* normalize style & weight */
+strong, em, small {
+  font-style: inherit;
+  font-weight: inherit; }
+
+/*---------------------------------------------------------------------
+variable
+---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------
+common
+---------------------------------------------------------------------*/
+body {
+  background: #171d2d;
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+/*---------------------------------------------------------------------
+top
+---------------------------------------------------------------------*/
+main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  main .wrapper .natura-menu-link {
+    width: 40%;
+    text-align: center;
+    font-size: 25px; }
+    main .wrapper .natura-menu-link ul.natura-list-link {
+      display: inline-block;
+      text-align: left; }
+      main .wrapper .natura-menu-link ul.natura-list-link > li + li {
+        margin-top: 80px; }
+      main .wrapper .natura-menu-link ul.natura-list-link > li a {
+        color: #A03232;
+        text-decoration: none; }
+        main .wrapper .natura-menu-link ul.natura-list-link > li a:hover {
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          opacity: 0.8; }
+  main .wrapper .natura-field-kv {
+    width: 60%; }
+    main .wrapper .natura-field-kv ul.natura-list-kv {
+      height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      main .wrapper .natura-field-kv ul.natura-list-kv > li {
+        width: calc(100% / 3 - 20px);
+        height: calc(100% / 3 - 20px);
+        margin: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: none; }
+        main .wrapper .natura-field-kv ul.natura-list-kv > li a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          opacity: 0;
+          background: #000000; }
+          main .wrapper .natura-field-kv ul.natura-list-kv > li a:hover {
+            opacity: 1; }
+            main .wrapper .natura-field-kv ul.natura-list-kv > li a:hover .top-nav-description {
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%); }
+          main .wrapper .natura-field-kv ul.natura-list-kv > li a .top-nav-description {
+            position: relative;
+            top: 50%;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 1.4em;
+            letter-spacing: 3px; }
+
+/*---------------------------------------------------------------------
+top modal
+---------------------------------------------------------------------*/
+.modal-wrap {
+  display: none; }
+  .modal-wrap .modal-contents {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2; }
+  .modal-wrap .modal-back {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    z-index: 1; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  color: #646464; }
+
+/*---------------------------------------------------------------------
+sub
+---------------------------------------------------------------------*/
+main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  main .gallery-preview-wrapper {
+    width: calc(100% - 460px);
+    min-width: 800px;
+    height: 70%;
+    background: #000000; }
+    main .gallery-preview-wrapper .gallery-preview {
+      width: 100%;
+      height: 100%;
+      background: url("/assets/images/hasu01/hasu01_01.jpg") no-repeat;
+      background-size: contain;
+      background-position: center; }
+  main ul.gallery-thumb-list {
+    width: 460px;
+    padding: 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    main ul.gallery-thumb-list > li {
+      width: 100px;
+      height: 100px;
+      margin: 6px;
+      background: url("/assets/images/hasu01/hasu01_01.jpg") no-repeat;
+      background-size: cover;
+      background-position: center; }

@@ -1,0 +1,33 @@
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  .gallery-preview-wrapper {
+    width: calc(100% - 460px);
+    min-width: 800px;
+    height: 70%;
+    background: #000000;
+    .gallery-preview {
+      width: 100%;
+      height: 100%;
+      background: url("/assets/images/hasu01/hasu01_01.jpg") no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  ul.gallery-thumb-list {
+    width: 460px;
+    padding: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+      width: 100px;
+      height: 100px;
+      margin: 6px;
+      background: url("/assets/images/hasu01/hasu01_01.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

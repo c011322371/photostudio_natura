@@ -1,0 +1,126 @@
+@import "reset";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/*---------------------------------------------------------------------
+variable
+---------------------------------------------------------------------*/
+$font-color : #A03232;
+$light-background-color : #171d2d;
+$dark-background-color : #000625;
+/*---------------------------------------------------------------------
+common
+---------------------------------------------------------------------*/
+body {
+  background: $light-background-color;
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+header{
+}
+
+/*---------------------------------------------------------------------
+top
+---------------------------------------------------------------------*/
+main{
+  .wrapper {
+    display: flex;
+    align-items: center;
+    .natura-menu-link {
+      width: 40%;
+      text-align: center;
+      font-size: 25px;
+      ul.natura-list-link {
+        display: inline-block;
+        text-align: left;
+        > li {
+          + li {
+            margin-top: 80px;
+          }
+          a{
+            color: $font-color;
+            text-decoration: none;
+            &:hover {
+              transition: 0.3s;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+    .natura-field-kv {
+      width: 60%;
+      ul.natura-list-kv {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        > li {
+          width: calc(100% / 3 - 20px);
+          height: calc(100% / 3 - 20px);
+          margin: 10px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          display: none;
+          a {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            opacity: 0;
+            background: #000000;
+            &:hover {
+              opacity: 1;
+              .top-nav-description {
+                transform: translateY(-50%);
+              }
+            }
+            .top-nav-description {
+              position: relative;
+              top: 50%;
+              transition: 0.5s;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 1.4em;
+              letter-spacing: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+top modal
+---------------------------------------------------------------------*/
+.modal-wrap{
+  display: none;
+  .modal-contents{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    z-index: 2;
+  }
+  .modal-back{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    z-index: 1;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  color: #646464;
+}
+/*---------------------------------------------------------------------
+sub
+---------------------------------------------------------------------*/
+@import "sub";

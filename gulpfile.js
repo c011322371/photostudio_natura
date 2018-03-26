@@ -1,6 +1,6 @@
 /*---------------------------------------------------------------------
 2017/09/17
-#author HikaruSasaki
+#author h.sasaki
 ---------------------------------------------------------------------*/
 var gulp = require("gulp");
 /*---------------------------------------------------------------------
@@ -10,6 +10,16 @@ var plumber = require("gulp-plumber");
 var browser = require("browser-sync");
 var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
+var assetsPath = "./src/";
+var destPath = "./dist/";
+
+var path = require('path');
+// javascript minify
+var uglify = require('gulp-uglify');
+// file rename
+var rename = require('gulp-rename');
+// error handling
+var plumber = require('gulp-plumber');
 /*---------------------------------------------------------------------
 js
 ---------------------------------------------------------------------*/
@@ -25,25 +35,25 @@ gulp.task("server", function() {
 });
 
 // jsの自動圧縮
-gulp.task("js", function() {
-    gulp.src(["js/**/*.js","!js/min/**/*.js"])
+gulp.task('js', function() {
+    gulp.src([path.join(assetsPath, 'js/*.js'),path.join('!', assetsPath, 'js/*.min.js')])
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest("./js/min"))
-        .pipe(browser.reload({stream:true}))
+        .pipe(rename({extname: '.min.js'}))
+        .pipe(gulp.dest(path.join(destPath, 'js/min/')));
 });
 
 gulp.task("sass", function() { //taskの登録
-    gulp.src("sass/**/*scss") //ファイル指定
+    gulp.src("./src/sass/**/*scss") //ファイル指定
         .pipe(plumber())
         .pipe(sass()) //srcで取得したファイルに処理を施す
         .pipe(autoprefixer()) //ベンダープレフィックス付与を自動化
-        .pipe(gulp.dest("./css")) //出力先に処理を施したファイルを出力
+        .pipe(gulp.dest("./dist/css")) //出力先に処理を施したファイルを出力
         .pipe(browser.reload({stream:true}))
 });
 
 //ファイルの監視
 gulp.task("default",['server'], function() {
-    gulp.watch(["js/**/*.js","!js/min/**/*.js"],["js"]);
-    gulp.watch("sass/**/*.scss",["sass"]);
+    gulp.watch("./src/sass/**/*.scss",["sass"]);
+    gulp.watch([path.join(assetsPath, 'js/*.js'),path.join('!', assetsPath, 'js/*.min.js')],['js']);
 });
