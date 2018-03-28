@@ -1,6 +1,4 @@
 @import "reset";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 /*---------------------------------------------------------------------
 variable
 ---------------------------------------------------------------------*/
@@ -47,9 +45,9 @@ main{
         }
       }
     }
-    .natura-field-kv {
+    .natura-field-nav {
       width: 60%;
-      ul.natura-list-kv {
+      ul.natura-list-nav {
         height: 100vh;
         display: flex;
         align-items: center;

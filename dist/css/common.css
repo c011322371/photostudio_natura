@@ -1,7 +1,5 @@
 @charset "UTF-8";
 /* margin padding reset */
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
   margin: 0;
   padding: 0; }
@@ -97,9 +95,9 @@ main .wrapper {
           -webkit-transition: 0.3s;
           transition: 0.3s;
           opacity: 0.8; }
-  main .wrapper .natura-field-kv {
+  main .wrapper .natura-field-nav {
     width: 60%; }
-    main .wrapper .natura-field-kv ul.natura-list-kv {
+    main .wrapper .natura-field-nav ul.natura-list-nav {
       height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -109,7 +107,7 @@ main .wrapper {
               align-items: center;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      main .wrapper .natura-field-kv ul.natura-list-kv > li {
+      main .wrapper .natura-field-nav ul.natura-list-nav > li {
         width: calc(100% / 3 - 20px);
         height: calc(100% / 3 - 20px);
         margin: 10px;
@@ -117,19 +115,19 @@ main .wrapper {
         background-repeat: no-repeat;
         background-position: center;
         display: none; }
-        main .wrapper .natura-field-kv ul.natura-list-kv > li a {
+        main .wrapper .natura-field-nav ul.natura-list-nav > li a {
           display: inline-block;
           height: 100%;
           width: 100%;
           text-decoration: none;
           opacity: 0;
           background: #000000; }
-          main .wrapper .natura-field-kv ul.natura-list-kv > li a:hover {
+          main .wrapper .natura-field-nav ul.natura-list-nav > li a:hover {
             opacity: 1; }
-            main .wrapper .natura-field-kv ul.natura-list-kv > li a:hover .top-nav-description {
+            main .wrapper .natura-field-nav ul.natura-list-nav > li a:hover .top-nav-description {
               -webkit-transform: translateY(-50%);
                       transform: translateY(-50%); }
-          main .wrapper .natura-field-kv ul.natura-list-kv > li a .top-nav-description {
+          main .wrapper .natura-field-nav ul.natura-list-nav > li a .top-nav-description {
             position: relative;
             top: 50%;
             -webkit-transition: 0.5s;
@@ -173,35 +171,77 @@ sub
 main {
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start; }
-  main .gallery-preview-wrapper {
-    width: calc(100% - 460px);
-    min-width: 800px;
-    height: 70%;
-    background: #000000; }
-    main .gallery-preview-wrapper .gallery-preview {
+  position: relative; }
+  main .sub-nav-wrap {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 1; }
+    main .sub-nav-wrap .sub-nav-icon {
+      position: absolute;
+      right: 0;
+      cursor: pointer; }
+      main .sub-nav-wrap .sub-nav-icon:hover {
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        opacity: 0.8; }
+      main .sub-nav-wrap .sub-nav-icon path {
+        fill: #A03232; }
+    main .sub-nav-wrap .sub-nav-list-wrap {
+      display: none; }
+      main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list {
+        width: 300px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        position: absolute;
+        top: 30px;
+        right: 0; }
+        main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list > li {
+          background-size: cover;
+          opacity: 1;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+          main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list > li:hover {
+            opacity: 0.7; }
+          main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list > li a {
+            width: 100px;
+            height: 100px;
+            display: block; }
+  main ul.gallery-preview {
+    width: 100%;
+    height: calc(100% - 136px);
+    background: #000000;
+    position: relative; }
+    main ul.gallery-preview > li {
       width: 100%;
       height: 100%;
-      background: url("/assets/images/hasu01/hasu01_01.jpg") no-repeat;
+      position: absolute;
+      display: none;
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+      background-repeat: no-repeat;
       background-size: contain;
       background-position: center; }
+      main ul.gallery-preview > li:first-of-type {
+        display: block; }
   main ul.gallery-thumb-list {
-    width: 460px;
+    height: 136px;
+    white-space: nowrap;
+    overflow-x: scroll;
     padding: 6px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    font-size: 0;
+    background: #171d2d; }
     main ul.gallery-thumb-list > li {
       width: 100px;
       height: 100px;
-      margin: 6px;
-      background: url("/assets/images/hasu01/hasu01_01.jpg") no-repeat;
+      margin: 12px 6px;
+      background-repeat: no-repeat;
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      display: inline-block;
+      cursor: pointer; }
+      main ul.gallery-thumb-list > li:hover {
+        opacity: 0.8; }

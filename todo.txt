@@ -1,0 +1,5 @@
+TODO
+
+Other artwork等名前の統一をする
+
+Navの読み込んでいるjsの整理

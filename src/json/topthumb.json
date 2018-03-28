@@ -2,46 +2,46 @@
   {
     "img": "/assets/images/thumbnail/thumb02.jpg",
     "description": "HASU",
-    "href": "./sub/hasu01/index.html"
+    "href": "/sub/hasu01/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb06.jpg",
     "description": "YURI",
-    "href": "./sub/yuri/index.html"
+    "href": "/sub/yuri/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb12.jpg",
     "description": "HASU",
-    "href": "./sub/hasu02/index.html"
+    "href": "/sub/hasu02/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb07.jpg",
     "description": "OTHER",
-    "href": "./sub/other/index.html"
+    "href": "/sub/other/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb05.jpg",
     "description": "HASU",
-    "href": "./sub/hasu03/index.html"
+    "href": "/sub/hasu03/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb08.jpg",
     "description": "HASU",
-    "href": "./sub/hasu04/index.html"
+    "href": "/sub/hasu04/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb13.jpg",
     "description": "FOODS",
-    "href": "./sub/foods/index.html"
+    "href": "/sub/foods/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb14.jpg",
     "description": "SUNFLOWER",
-    "href": "./sub/sunflower/index.html"
+    "href": "/sub/sunflower/index.html"
   },
   {
     "img": "/assets/images/thumbnail/thumb15.jpg",
     "description": "WITHERED",
-    "href": "./sub/withered/index.html"
+    "href": "/sub/withered/index.html"
   }
 ]
