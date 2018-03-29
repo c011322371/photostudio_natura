@@ -23,11 +23,7 @@ var CREATE_TOP_THUMBNAIL = {
   bindEvent: function () {
     // topのnavのcassettesを作成
     this.createCassettes();
-
-    // 画像の読み込みが終わり次第アニメーション開始
-    $(window).on('load', $.proxy(function () {
-      this.kvAnimation();
-    }, this));
+    this.kvAnimation();
   },
   createCassettes: function () {
     var fragment = document.createDocumentFragment();
