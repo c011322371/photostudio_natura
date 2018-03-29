@@ -4,6 +4,9 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
   margin: 0;
   padding: 0; }
 
+body {
+  overflow: hidden; }
+
 /* remove list point mark */
 ul, ol {
   list-style: none; }
@@ -237,6 +240,7 @@ main {
     height: 136px;
     white-space: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
     padding: 6px;
     font-size: 0;
     background: #171d2d; }
@@ -248,9 +252,13 @@ main {
       background-size: cover;
       background-position: center;
       display: inline-block;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
       main ul.gallery-thumb-list > li:hover {
-        opacity: 0.8; }
+        opacity: 0.8;
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05); }
   main .back-filter {
     width: 100%;
     height: 100%;

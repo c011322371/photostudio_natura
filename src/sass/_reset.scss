@@ -3,6 +3,9 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
   margin: 0;
   padding: 0;
 }
+body {
+  overflow: hidden;
+}
 /* remove list point mark */
 ul, ol {
   list-style: none;
