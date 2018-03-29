@@ -1,28 +1,37 @@
 main {
   width: 100%;
   height: 100vh;
-  position: relative;
   .sub-nav-wrap {
-    position: absolute;
+    position: relative;
     top: 5px;
     right: 10px;
     z-index: 1;
+    .home-icon {
+      fill: #2D6F4D;
+      position: absolute;
+      right: 35px;
+      top: 0;
+      line-height: 1;
+    }
     .sub-nav-icon {
       position: absolute;
       right: 0;
-      cursor: pointer;
+      line-height: 1;
+      path {
+        fill: $font-color;
+      }
+    }
+    .home-icon,
+    .sub-nav-icon {
       &:hover {
         transition: 0.3s;
         opacity: 0.8;
-      }
-      path {
-        fill: $font-color;
       }
     }
     .sub-nav-list-wrap {
       display: none;
       .sub-nav-list {
-        width: 300px;
+        width: 195px;
         display: flex;
         flex-wrap: wrap;
         position: absolute;
@@ -36,8 +45,8 @@ main {
             opacity: 0.7;
           }
           a {
-            width: 100px;
-            height: 100px;
+            width: 65px;
+            height: 65px;
             display: block;
           }
         }
@@ -83,5 +92,14 @@ main {
         opacity: 0.8;
       }
     }
+  }
+  .back-filter {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    opacity: 0.4;
+    background: $light-background-color;
   }
 }

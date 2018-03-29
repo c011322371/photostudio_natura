@@ -40,9 +40,7 @@ var CREATE_TOP_THUMBNAIL = {
   },
   kvAnimation: function () {
     // casettesを生成したため、変数ではなく再取得するような記述をしている
-    console.log($('.jsc-top-nav-list li'));
     $('.jsc-top-nav-list li').each(function (index) {
-      console.log($(this));
       $(this).delay(150 * index).fadeTo(1000, 1);
     });
   }

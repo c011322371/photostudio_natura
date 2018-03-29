@@ -170,27 +170,33 @@ sub
 ---------------------------------------------------------------------*/
 main {
   width: 100%;
-  height: 100vh;
-  position: relative; }
+  height: 100vh; }
   main .sub-nav-wrap {
-    position: absolute;
+    position: relative;
     top: 5px;
     right: 10px;
     z-index: 1; }
+    main .sub-nav-wrap .home-icon {
+      fill: #2D6F4D;
+      position: absolute;
+      right: 35px;
+      top: 0;
+      line-height: 1; }
     main .sub-nav-wrap .sub-nav-icon {
       position: absolute;
       right: 0;
-      cursor: pointer; }
-      main .sub-nav-wrap .sub-nav-icon:hover {
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-        opacity: 0.8; }
+      line-height: 1; }
       main .sub-nav-wrap .sub-nav-icon path {
         fill: #A03232; }
+    main .sub-nav-wrap .home-icon:hover,
+    main .sub-nav-wrap .sub-nav-icon:hover {
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      opacity: 0.8; }
     main .sub-nav-wrap .sub-nav-list-wrap {
       display: none; }
       main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list {
-        width: 300px;
+        width: 195px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -207,8 +213,8 @@ main {
           main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list > li:hover {
             opacity: 0.7; }
           main .sub-nav-wrap .sub-nav-list-wrap .sub-nav-list > li a {
-            width: 100px;
-            height: 100px;
+            width: 65px;
+            height: 65px;
             display: block; }
   main ul.gallery-preview {
     width: 100%;
@@ -245,3 +251,11 @@ main {
       cursor: pointer; }
       main ul.gallery-thumb-list > li:hover {
         opacity: 0.8; }
+  main .back-filter {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    opacity: 0.4;
+    background: #171d2d; }

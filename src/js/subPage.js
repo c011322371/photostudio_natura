@@ -71,12 +71,13 @@ var TOGGLE_NAV_MENU = {
   setParameters: function () {
     this.$navIcon = $('.jsc-nav-icon');
     this.$navList = $('.jsc-nav-wrap');
+    this.$backFilter = $('.jsc-back-filter');
   },
   bindEvent: function () {
     this.$navIcon.on('click', $.proxy(this.toggleNavMenu, this));
   },
   toggleNavMenu: function () {
-    this.$navList.fadeToggle()
+    this.$navList.add(this.$backFilter).fadeToggle();
   }
 };
 
