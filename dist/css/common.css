@@ -71,6 +71,12 @@ body {
   background: #171d2d;
   font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
 
+.contents-wrapper {
+  display: none; }
+
+.isSP {
+  display: none; }
+
 /*---------------------------------------------------------------------
 top
 ---------------------------------------------------------------------*/
@@ -82,15 +88,29 @@ main .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media screen and (max-width: 510px) {
+    main .wrapper {
+      display: block; } }
   main .wrapper .natura-menu-link {
     width: 40%;
     text-align: center;
     font-size: 25px; }
+    @media screen and (max-width: 510px) {
+      main .wrapper .natura-menu-link {
+        width: 100%;
+        font-size: 22px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; } }
     main .wrapper .natura-menu-link ul.natura-list-link {
       display: inline-block;
       text-align: left; }
       main .wrapper .natura-menu-link ul.natura-list-link > li + li {
         margin-top: 80px; }
+        @media screen and (max-width: 510px) {
+          main .wrapper .natura-menu-link ul.natura-list-link > li + li {
+            margin-top: 0; } }
       main .wrapper .natura-menu-link ul.natura-list-link > li a {
         color: #A03232;
         text-decoration: none; }
@@ -98,8 +118,24 @@ main .wrapper {
           -webkit-transition: 0.3s;
           transition: 0.3s;
           opacity: 0.8; }
+      @media screen and (max-width: 510px) {
+        main .wrapper .natura-menu-link ul.natura-list-link {
+          display: none;
+          margin: 10px; } }
+    @media screen and (max-width: 510px) {
+      main .wrapper .natura-menu-link .sp-nav {
+        display: inline-block;
+        margin: 10px;
+        fill: #A03232; } }
+    @media screen and (max-width: 510px) {
+      main .wrapper .natura-menu-link .sp-nav.isOpen {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); } }
   main .wrapper .natura-field-nav {
     width: 60%; }
+    @media screen and (max-width: 510px) {
+      main .wrapper .natura-field-nav {
+        width: 100%; } }
     main .wrapper .natura-field-nav ul.natura-list-nav {
       height: 100vh;
       display: -webkit-box;
@@ -110,6 +146,16 @@ main .wrapper {
               align-items: center;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+      @media screen and (max-width: 510px) {
+        main .wrapper .natura-field-nav ul.natura-list-nav {
+          width: 360px;
+          height: 360px;
+          position: absolute;
+          top: 20%;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto; } }
       main .wrapper .natura-field-nav ul.natura-list-nav > li {
         width: calc(100% / 3 - 20px);
         height: calc(100% / 3 - 20px);
@@ -118,6 +164,10 @@ main .wrapper {
         background-repeat: no-repeat;
         background-position: center;
         display: none; }
+        @media screen and (max-width: 510px) {
+          main .wrapper .natura-field-nav ul.natura-list-nav > li {
+            width: 100px;
+            height: 100px; } }
         main .wrapper .natura-field-nav ul.natura-list-nav > li a {
           display: inline-block;
           height: 100%;
@@ -139,6 +189,12 @@ main .wrapper {
             text-align: center;
             font-size: 1.4em;
             letter-spacing: 3px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  color: #646464; }
 
 /*---------------------------------------------------------------------
 top modal
@@ -162,11 +218,45 @@ top modal
     opacity: .7;
     z-index: 1; }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  font-size: 12px;
-  color: #646464; }
+/*---------------------------------------------------------------------
+loading
+---------------------------------------------------------------------*/
+.loading-display {
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+  .loading-display .spinner {
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+    background-color: #666666;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: sk-scaleout 2s infinite;
+            animation: sk-scaleout 2s infinite; }
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
 
 /*---------------------------------------------------------------------
 sub
@@ -185,11 +275,20 @@ main {
       right: 35px;
       top: 0;
       line-height: 1; }
+      @media screen and (max-width: 510px) {
+        main .sub-nav-wrap .home-icon > svg {
+          width: 40px;
+          height: 35px;
+          margin-right: 15px; } }
     main .sub-nav-wrap .sub-nav-icon {
       position: absolute;
       right: 0;
       line-height: 1; }
-      main .sub-nav-wrap .sub-nav-icon path {
+      @media screen and (max-width: 510px) {
+        main .sub-nav-wrap .sub-nav-icon > svg {
+          width: 35px;
+          height: 35px; } }
+      main .sub-nav-wrap .sub-nav-icon > svg path {
         fill: #A03232; }
     main .sub-nav-wrap .home-icon:hover,
     main .sub-nav-wrap .sub-nav-icon:hover {
@@ -236,6 +335,10 @@ main {
       background-position: center; }
       main ul.gallery-preview > li:first-of-type {
         display: block; }
+      @media screen and (max-width: 510px) {
+        main ul.gallery-preview > li {
+          -webkit-transform: scale(0.8);
+                  transform: scale(0.8); } }
   main ul.gallery-thumb-list {
     height: 136px;
     white-space: nowrap;
@@ -259,11 +362,12 @@ main {
         opacity: 0.8;
         -webkit-transform: scale(1.05);
                 transform: scale(1.05); }
-  main .back-filter {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-    top: 0;
-    opacity: 0.4;
-    background: #171d2d; }
+
+.back-filter {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  background: #171d2d; }

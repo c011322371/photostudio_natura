@@ -77,7 +77,25 @@ var MODAL_MANAGER = {
   }
 };
 
+var LOADING_DISPLAY = {
+  init: function () {
+    this.setParameters();
+    this.bindEvent();
+  },
+  setParameters: function () {
+    this.$windowHeight = $(window).height();
+  },
+  bindEvent: function () {
+
+  }
+};
+
 $(function () {
   CREATE_TOP_THUMBNAIL.load();
   MODAL_MANAGER.init();
+});
+
+$(window).on('load', function () {
+  $('.jsc-loading').fadeOut(800);
+  $('.jsc-contents-wrapper').css('display', 'block');
 });

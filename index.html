@@ -15,38 +15,49 @@
 </head>
 
 <body>
-  <header></header>
-  <main>
-    <div class="wrapper">
-      <nav class="natura-menu-link">
-        <ul class="natura-list-link">
-          <li>
-            <h1>
-              <a href="/">NATURA</a>
-            </h1>
-          </li>
-          <li class="jsc-modal-trigger">
-            <a href="#">READ ME</a>
-          </li>
-          <li>
-            <a href="mailto:photostudionatura@gmail.com">EMAIL</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="natura-field-nav">
-        <ul class="natura-list-nav jsc-nav-list jsc-top-nav-list">
-          <li>
-            <a href="#">
-              <p class="top-nav-description"></p>
-            </a>
-          </li>
-        </ul>
+  <div class="contents-wrapper jsc-contents-wrapper">
+    <header></header>
+    <main>
+      <div class="wrapper">
+        <nav class="natura-menu-link">
+          <ul class="natura-list-link jsc-link-list">
+            <li>
+              <h1>
+                <a href="/">NATURA</a>
+              </h1>
+            </li>
+            <li class="jsc-modal-trigger">
+              <a href="#">READ ME</a>
+            </li>
+            <li>
+              <a href="mailto:photostudionatura@gmail.com">EMAIL</a>
+            </li>
+          </ul>
+          <a href="#" class="sp-nav isSP jsc-sp-nav">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+              version="1.1" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 " />
+            </svg>
+          </a>
+        </nav>
+        <div class="natura-field-nav">
+          <ul class="natura-list-nav jsc-nav-list jsc-top-nav-list">
+            <li>
+              <a href="#">
+                <p class="top-nav-description"></p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <small>&copy; フォトスタジオ ナチューラ</small>
-  </footer>
+    </main>
+    <footer>
+      <small>&copy; フォトスタジオ ナチューラ</small>
+    </footer>
+  </div>
+  <div class="loading-display jsc-loading">
+    <div class="spinner"></div>
+  </div>
   <div class="modal-wrap jsc-modal-contents">
     <div class="modal-contents">
       本サイトへのアクセスありがとうございます。
@@ -65,8 +76,10 @@
     </div>
     <div class="modal-back"></div>
   </div>
+  <div class="back-filter jsc-back-filter"></div>
   <script src="/dist/js/min/jquery-3.2.1.min.js"></script>
   <script src="/dist/js/min/common.min.js"></script>
+  <script src="/dist/js/min/topPage.min.js"></script>
 </body>
 
 </html>

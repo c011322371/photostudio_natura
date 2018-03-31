@@ -12,13 +12,26 @@ main {
       right: 35px;
       top: 0;
       line-height: 1;
+      > svg {
+        @include max-screen($breakpoint-mobile) {
+          width: 40px;
+          height: 35px;
+          margin-right: 15px;
+        }
+      }
     }
     .sub-nav-icon {
       position: absolute;
       right: 0;
       line-height: 1;
-      path {
-        fill: $font-color;
+      > svg {
+        @include max-screen($breakpoint-mobile) {
+          width: 35px;
+          height: 35px;
+        }
+        path {
+          fill: $font-color;
+        }
       }
     }
     .home-icon,
@@ -70,6 +83,9 @@ main {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      @include max-screen($breakpoint-mobile) {
+        transform: scale(0.8);
+      }
     }
   }
   ul.gallery-thumb-list {
@@ -96,13 +112,13 @@ main {
       }
     }
   }
-  .back-filter {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-    top: 0;
-    opacity: 0.4;
-    background: $light-background-color;
-  }
+}
+.back-filter {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  background: $light-background-color;
 }
